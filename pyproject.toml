@@ -1,0 +1,20 @@
+[project]
+name = "trading-bot"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = []
+
+[tool.uv]
+package = false
+
+[tool.uv.workspace]
+members = ["libs/core", "collector", "strategies", "risk", "execution", "backtest", "monitoring"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.mypy]
+strict = true
+
+[tool.pytest.ini_options]
+testpaths = ["libs/core/tests", "collector/tests", "strategies/tests", "risk/tests", "execution/tests", "backtest/tests", "monitoring/tests", "tests"]
